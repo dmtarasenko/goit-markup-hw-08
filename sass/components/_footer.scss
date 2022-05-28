@@ -1,0 +1,138 @@
+.footer {
+  background-color: #2f303a;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  & .container {
+    display: flex;
+    align-items: baseline;
+  }
+}
+
+.footer-address__container {
+  margin-right: 70px;
+  width: 231px;
+}
+
+.footer-social__container {
+  margin-right: 93px;
+}
+
+.footer-social__title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.footer-social__list {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-social__item {
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.footer-social__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+
+  transition: background-color 250ms var(--main-timing-function);
+
+  &:hover,
+  &:focus {
+    background-color: var(--active-color);
+  }
+}
+
+.footer-social__icon {
+  fill: #ffffff;
+}
+
+/* FORM */
+
+.footer-form__container {
+  width: 570px;
+}
+
+.footer-form__title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.footer-form {
+  display: flex;
+}
+
+.footer-form__label {
+  margin-right: 12px;
+}
+
+.footer-form__input {
+  width: 358px;
+  height: 50px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  padding: 16px 15px;
+
+  font-size: 16px;
+  line-height: calc(20 / 16);
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+
+  &::placeholder {
+    font-size: 16px;
+    line-height: calc(20 / 16);
+    margin-left: 16px;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+.footer-form__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: calc(30 / 16);
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  background-color: #2196f3;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: unset;
+  width: 200px;
+  height: 50px;
+  padding: 0;
+
+  &:hover,
+  &:focus {
+    background-color: #188ce8;
+    transition: background-color 250ms var(--main-timing-function);
+  }
+}
+
+.footer-form__icon {
+  margin-left: 10px;
+  fill: #ffffff;
+}

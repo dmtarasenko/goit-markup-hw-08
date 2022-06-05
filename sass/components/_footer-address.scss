@@ -4,7 +4,11 @@
 
 .footer-address__item {
   &:not(:first-child) {
-    margin-top: 9px;
+    margin-top: 8px;
+
+    @media screen and (min-width: 1200px) {
+      margin-top: 9px;
+    }
   }
 }
 

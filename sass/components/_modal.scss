@@ -3,13 +3,13 @@
   position: fixed;
   top: 0;
   left: 0;
-  transition: opacity 250ms var(--main-timing-function),
-    visibility 250ms var(--main-timing-function);
 
   width: 100vw;
   height: 100vh;
 
   background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 250ms var(--main-timing-function),
+    visibility 250ms var(--main-timing-function);
 
   &.is-hidden {
     opacity: 0;
@@ -26,14 +26,21 @@
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms var(--main-timing-function);
 
-  width: 528px;
-  height: 581px;
+  width: 93.75%;
   padding: 40px;
 
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+
+  @media screen and (min-width: 480px) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+  }
 
   .backdrop.is-hidden & {
     transform: translate(-50%, -50%) scale(1.2);
@@ -59,12 +66,18 @@
   margin-bottom: 10px;
 }
 
+.form__wrapper {
+  display: block;
+  position: relative;
+  margin-top: 4px;
+}
+
 .form__input {
   width: 100%;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  padding: 0 42px;
+  padding: 0 0 0 42px;
   transition: border-color 250ms var(--main-timing-function);
 
   &:focus,
@@ -72,12 +85,6 @@
     border-color: #2196f3;
     outline: none;
   }
-}
-
-.form__wrapper {
-  display: block;
-  position: relative;
-  margin-top: 4px;
 }
 
 .form__icon {
@@ -130,42 +137,38 @@
 
 .form__checkbox-label {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
-  margin-bottom: 30px;
+  display: block;
+
+  text-align: center;
 
   font-weight: 400;
-  font-size: 14px;
+  font-size: 12px;
   line-height: calc(24 / 14);
   letter-spacing: 0.03em;
   color: #757575;
 }
 
-.form__contract-link {
-  margin-left: 5px;
-
-  font-weight: normal;
-  font-size: 14px;
-  line-height: calc(24 / 14);
-  letter-spacing: 0.03em;
-  text-decoration-line: underline;
-  color: #2196f3;
-}
-
 .form__checkbox-icon {
-  margin-right: 8px;
-
   border: 2px solid #212121;
   border-radius: 2px;
   fill: transparent;
-  transition: fill 250ms var(--main-timing-function), border 0ms var(--main-timing-function) 250ms;
+  transition: fill 250ms var(--main-timing-function),
+    border 0ms var(--main-timing-function) 250ms;
 
   .form__checkbox:checked ~ & {
     fill: #2196f3;
     border: none;
   }
+}
+
+.form__contract-link {
+  font-weight: normal;
+  font-size: 12px;
+  line-height: calc(24 / 14);
+  letter-spacing: 0.03em;
+  text-decoration-line: underline;
+  color: #2196f3;
 }
 
 .form__btn {
@@ -175,8 +178,7 @@
   width: 200px;
   height: 50px;
   padding: 0;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 30px auto 0 auto;
   cursor: pointer;
   font-weight: 700;
   font-size: 16px;

@@ -2,20 +2,42 @@
   background-color: #2f303a;
   padding-top: 60px;
   padding-bottom: 60px;
+  text-align: center;
 
   & .container {
-    display: flex;
-    align-items: baseline;
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    @media screen and (min-width: 1200px) {
+      flex-wrap: nowrap;
+      text-align: left;
+      align-items: baseline;
+    }
   }
 }
 
 .footer-address__container {
-  margin-right: 70px;
-  width: 231px;
+  @media screen and (min-width: 768px) {
+    flex: 1 1 50%;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 70px;
+    width: 231px;
+  }
 }
 
 .footer-social__container {
-  margin-right: 93px;
+  @media screen and (max-width: 767px) {
+    margin-top: 60px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    flex: 1 1 50%;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 93px;
+  }
 }
 
 .footer-social__title {
@@ -63,7 +85,12 @@
 /* FORM */
 
 .footer-form__container {
-  width: 570px;
+  @media screen and (min-width: 768px) {
+    flex: 1 1 100%;
+  }
+  @media screen and (max-width: 1199px) {
+    margin-top: 60px;
+  }
 }
 
 .footer-form__title {
@@ -78,14 +105,22 @@
 
 .footer-form {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+  }
 }
 
 .footer-form__label {
-  margin-right: 12px;
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
 }
 
 .footer-form__input {
-  width: 358px;
+  width: 100%;
   height: 50px;
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -96,6 +131,13 @@
   line-height: calc(20 / 16);
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+
+  @media screen and (min-width: 768px) {
+    width: 450px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+  }
 
   &::placeholder {
     font-size: 16px;
@@ -124,6 +166,11 @@
   width: 200px;
   height: 50px;
   padding: 0;
+  margin: 20px;
+
+  @media screen and (min-width: 1200px) {
+    margin: 0 0 0 20px;
+  }
 
   &:hover,
   &:focus {

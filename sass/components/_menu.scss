@@ -1,4 +1,4 @@
-.menu-btn {
+.menu__btn {
    position: absolute;
    right: 15px;
    top: 10px;
@@ -9,11 +9,13 @@
    padding: 0;
    border: unset;
    background-color: transparent;
-   transition: fill var(--main-timing-function) 100ms;
+   transition: fill var(--main-timing-function) 250ms;
+   cursor: pointer;
 
    @media screen and (min-width: 768px) {
       display: none;
    }
+
    &:focus,
    &:hover {
       fill: var(--active-color);
@@ -21,13 +23,12 @@
 }
 
 .menu {
-   display: none;
-
-   width: 100vw;
-   height: 100vh;
+   width: 100%;
+   height: 100%;
    position: fixed;
    right: 0;
    top: 0;
+   transform: translateX(100%);
    padding: 48px 40px;
 
    background-color: #fff;
@@ -37,8 +38,9 @@
    @media screen and (min-width: 480px) {
       width: 480px;
    }
-   @media screen and (min-width: 768px) {
-      display: none;
+
+   &.is-open {
+      transform: translateX(0);
    }
 }
 
@@ -49,11 +51,12 @@
 }
 
 .menu__link {
+   @extend %resets-link;
+
    font-weight: 500;
    font-size: 40px;
    line-height: 47px;
    text-align: center;
    letter-spacing: 0.02em;
-   @extend %resets-link;
    color: #212121;
 }

@@ -1464,6 +1464,13 @@ img {
   transition: transform 250ms var(--main-timing-function);
   transition: transform 250ms var(--main-timing-function), -webkit-transform 250ms var(--main-timing-function);
 }
+@media screen and (max-width: 420px) {
+  .project__text-popup {
+    padding: 20px 20px;
+    font-size: 14px;
+    line-height: 1.5714285714;
+  }
+}
 .project__link:hover .project__text-popup, .project__link:focus .project__text-popup {
   -webkit-transform: translateY(0);
           transform: translateY(0);
@@ -1491,7 +1498,7 @@ img {
   margin-top: 4px;
 }
 
-.menu-btn {
+.menu__btn {
   position: absolute;
   right: 15px;
   top: 10px;
@@ -1508,25 +1515,27 @@ img {
   padding: 0;
   border: unset;
   background-color: transparent;
-  -webkit-transition: fill var(--main-timing-function) 100ms;
-  transition: fill var(--main-timing-function) 100ms;
+  -webkit-transition: fill var(--main-timing-function) 250ms;
+  transition: fill var(--main-timing-function) 250ms;
+  cursor: pointer;
 }
 @media screen and (min-width: 768px) {
-  .menu-btn {
+  .menu__btn {
     display: none;
   }
 }
-.menu-btn:focus, .menu-btn:hover {
+.menu__btn:focus, .menu__btn:hover {
   fill: var(--active-color);
 }
 
 .menu {
-  display: none;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   position: fixed;
   right: 0;
   top: 0;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
   padding: 48px 40px;
   background-color: #fff;
   -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
@@ -1537,10 +1546,9 @@ img {
     width: 480px;
   }
 }
-@media screen and (min-width: 768px) {
-  .menu {
-    display: none;
-  }
+.menu.is-open {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 .menu__item:not(:last-child) {

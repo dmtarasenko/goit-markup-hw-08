@@ -10,6 +10,8 @@
   background-color: rgba(0, 0, 0, 0.2);
   transition: opacity 250ms var(--main-timing-function),
     visibility 250ms var(--main-timing-function);
+  overflow-y: scroll;
+  z-index: 3;
 
   &.is-hidden {
     opacity: 0;
@@ -25,6 +27,7 @@
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms var(--main-timing-function);
+  z-index: 4;
 
   width: 93.75%;
   padding: 40px;
@@ -94,8 +97,8 @@
   transform: translateY(-50%);
   transition: fill 250ms var(--main-timing-function);
 
-  .form__input:not(:placeholder-shown) + &,
-  .form__input:focus + & {
+  .form__input:not(:placeholder-shown)+&,
+  .form__input:focus+& {
     fill: #2196f3;
   }
 }
@@ -156,7 +159,7 @@
   transition: fill 250ms var(--main-timing-function),
     border 0ms var(--main-timing-function) 250ms;
 
-  .form__checkbox:checked ~ & {
+  .form__checkbox:checked~& {
     fill: #2196f3;
     border: none;
   }

@@ -1,15 +1,14 @@
 .header {
-   position: relative;
    border-bottom: #ececec solid 1px;
 
    & .container {
+      position: relative;
+
       display: flex;
       align-items: center;
 
       @media screen and (max-width: 767px) {
          height: 60px;
-         justify-content: space-between;
-
       }
    }
 }

@@ -260,7 +260,9 @@ img {
     display: block;
     padding-top: 32px;
     padding-bottom: 32px;
+    font-weight: 500;
     font-size: 14px;
+    letter-spacing: 0.02em;
     line-height: 1.1428571429;
   }
 }
@@ -305,7 +307,7 @@ img {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin-left: 95px;
+    margin-left: 87px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -319,7 +321,7 @@ img {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    margin-left: 326px;
+    margin-left: 318px;
   }
 }
 

@@ -126,10 +126,6 @@
 /* FORM */
 
 .footer-form__container {
-  @media screen and (min-width: 768px) {
-    flex: 1 1 100%;
-  }
-
   @media screen and (max-width: 1199px) {
     margin-top: 60px;
   }

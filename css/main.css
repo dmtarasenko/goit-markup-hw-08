@@ -1092,13 +1092,6 @@ img {
 }
 
 /* FORM */
-@media screen and (min-width: 768px) {
-  .footer-form__container {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 100%;
-            flex: 1 1 100%;
-  }
-}
 @media screen and (max-width: 1199px) {
   .footer-form__container {
     margin-top: 60px;

@@ -11,7 +11,7 @@
   transition: opacity 250ms var(--main-timing-function),
     visibility 250ms var(--main-timing-function);
   overflow-y: scroll;
-  z-index: 3;
+  z-index: 5;
 
   &.is-hidden {
     opacity: 0;
@@ -27,7 +27,7 @@
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms var(--main-timing-function);
-  z-index: 4;
+  z-index: 6;
 
   width: 93.75%;
   padding: 40px;
